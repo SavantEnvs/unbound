@@ -1,0 +1,10 @@
+project: savantenvs/unbound
+target: parse-packet-fuzzer
+# mayhem-lint: keep-testsuite
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parse-packet-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/parse_packet_fuzzer
+    libfuzzer: true
+    timeout: 30
