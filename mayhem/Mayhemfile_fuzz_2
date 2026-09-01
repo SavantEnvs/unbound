@@ -1,0 +1,10 @@
+project: savantenvs/unbound
+target: fuzz-2-fuzzer
+# mayhem-lint: keep-testsuite
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-2-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_2_fuzzer
+    libfuzzer: true
+    timeout: 30
