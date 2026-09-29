@@ -1,0 +1,9 @@
+project: savantenvs/unbound
+target: fuzz-1-fuzzer-buggy-mhh-run-15
+# origin: https://app.mayhem.security/mayhemheroes/unbound/fuzz-1-fuzzer/15
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+cmds:
+  - cmd: /mayhem/fuzz_1_fuzzer
+    libfuzzer: true
+    timeout: 30
